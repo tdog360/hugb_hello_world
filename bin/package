@@ -1,3 +1,4 @@
 #!/bin/bash
 
-./gradlew jar
+# ./gradlew jar //this doesn't work for multiple dependencies, we can't make a "fat" jar file
+./gradlew installDist #included in the application plugin

@@ -1,11 +1,17 @@
 #!/bin/bash
 
-JAR="hugb_hello_world.jar"
-
+#JAR="hugb_hello_world.jar"
+APP="hugb_hello_world"
 bin/clean
 bin/package
 
-test -f /tmp/${JAR} && rm /tmp/${JAR}
-cp build/libs/${JAR} /tmp
+#test -f /tmp/${JAR} && rm /tmp/${JAR}
+#cp build/libs/${JAR} /tmp
 
-java -jar /tmp/${JAR}
+#java -jar /tmp/${JAR}
+
+test -f /tmp/${APP} && rm -r /tmp/${APP}
+cp -r build/install/${APP} /tmp
+
+/tmp/${APP}/bin/${APP}
+
